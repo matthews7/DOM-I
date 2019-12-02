@@ -82,12 +82,12 @@ newNav.appendChild(arash);
 const ctaH1 = document.querySelector("h1");
 ctaH1.innerHTML = siteContent.cta.h1.split(" ").join("<br>")
 
-// ctaH1.style.color = 'pink';
+ctaH1.style.color = 'pink';
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
-// button.style.color= 'purple';
+button.style.color= 'purple';
 
 // Main Content
 
@@ -120,7 +120,7 @@ contactInfo[2].textContent = siteContent.contact.email;
 const copyRight = document.querySelector('footer p');
 copyRight.textContent = siteContent.footer.copyright
 
-// copyRight.style.color = 'red';
+copyRight.style.color = 'red';
 
 
 
