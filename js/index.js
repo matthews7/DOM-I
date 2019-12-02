@@ -50,7 +50,7 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation
 
-const navBar = document.querySelectorAll('a');
+let navBar = document.querySelectorAll('a');
 navBar[0].textContent = siteContent.nav["nav-item-1"];
 navBar[1].textContent = siteContent.nav["nav-item-2"];
 navBar[2].textContent = siteContent.nav["nav-item-3"];
@@ -58,13 +58,36 @@ navBar[3].textContent = siteContent.nav["nav-item-4"];
 navBar[4].textContent = siteContent.nav["nav-item-5"];
 navBar[5].textContent = siteContent.nav["nav-item-6"];
 
+navBar.forEach(value => {
+  value.style.color = 'green'
+});
+
+const arash = document.createElement('a');
+arash.textContent = 'Arash';
+arash.style.color = 'green';
+
+const ammon = document.createElement('a');
+ammon.textContent = 'Ammon';
+ammon.style.color = 'green';
+
+const newNav = document.querySelector('nav');
+newNav.prepend(ammon);
+newNav.appendChild(arash);
+
+
+
+
 // CTA Section
 
 const ctaH1 = document.querySelector("h1");
 ctaH1.innerHTML = siteContent.cta.h1.split(" ").join("<br>")
 
+// ctaH1.style.color = 'pink';
+
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
+
+// button.style.color= 'purple';
 
 // Main Content
 
@@ -82,6 +105,7 @@ mainContent[2].textContent = siteContent["main-content"]["services-content"];
 mainContent[3].textContent = siteContent["main-content"]["product-content"];
 mainContent[4].textContent = siteContent["main-content"]["vision-content"];
 
+
 // Contact
 
 const contactH4 = document.querySelector('.contact h4');
@@ -95,6 +119,8 @@ contactInfo[2].textContent = siteContent.contact.email;
 // Footer
 const copyRight = document.querySelector('footer p');
 copyRight.textContent = siteContent.footer.copyright
+
+// copyRight.style.color = 'red';
 
 
 
