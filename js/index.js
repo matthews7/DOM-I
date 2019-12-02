@@ -89,6 +89,9 @@ button.textContent = siteContent.cta.button;
 
 button.style.color= 'purple';
 
+button.addEventListener("click", function(event) {
+  button.textContent = "NOOOOOO!!!";
+});
 // Main Content
 
 const mainH4 = document.querySelectorAll('.main-content h4');
